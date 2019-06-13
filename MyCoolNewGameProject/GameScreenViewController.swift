@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameScreenViewController: UIViewController {
     
     @IBOutlet var Buttons: [UIButton]!
     @IBOutlet weak var WinnerLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var gifView: UIImageView!
     
-    var isOnePlayer = true
+    var isOnePlayer: Bool?
     var activePlayer = 1
     var aiHasMoved = true
     var gameStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     let winningCombinations = [[0, 1, 2], [3, 4, 5,], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     var gameIsActive = true
+    var audioPlayer: AVAudioPlayer?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +51,7 @@ class GameScreenViewController: UIViewController {
     }
     
     func buttonLogic(_ button: UIButton) {
-        if isOnePlayer {
+        if isOnePlayer! {
             if aiHasMoved {
                 if (gameStatus[button.tag - 1] == 0 && gameIsActive == true) {
                     gameStatus[button.tag - 1] = activePlayer
@@ -89,11 +93,17 @@ class GameScreenViewController: UIViewController {
                     resetButton.isHidden = false
                     WinnerLabel.text = "O's Win!!!"
                     gameIsActive = false
+                    gifView.isHidden = false
+                    gifView.loadGif(name: "giphy")
+                    playVictorySound()
                 } else {
                     WinnerLabel.isHidden = false
                     resetButton.isHidden = false
                     WinnerLabel.text = "X's Win!!!"
                     gameIsActive = false
+                    gifView.isHidden = false
+                    gifView.loadGif(name: "tenor")
+                    youSuckSound()
                 }
             }
         }
@@ -120,6 +130,7 @@ class GameScreenViewController: UIViewController {
     func gameReset() {
         WinnerLabel.isHidden = true
         resetButton.isHidden = true
+        gifView.isHidden = true
         gameIsActive = true
         activePlayer = 1
         aiHasMoved = true
@@ -217,5 +228,21 @@ class GameScreenViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    func playVictorySound() {
+        guard let path = Bundle.main.path(forResource: "flawlessvictory", ofType: "mp3") else { return }
+        let url = URL(fileURLWithPath: path)
+        audioPlayer = try?  AVAudioPlayer(contentsOf: url, fileTypeHint: nil)
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.play()
+    }
+    
+    func youSuckSound() {
+        guard let path = Bundle.main.path(forResource: "yousuck", ofType: "mp3") else { return }
+        let url = URL(fileURLWithPath: path)
+        audioPlayer = try?  AVAudioPlayer(contentsOf: url, fileTypeHint: nil)
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.play()
     }
 }
