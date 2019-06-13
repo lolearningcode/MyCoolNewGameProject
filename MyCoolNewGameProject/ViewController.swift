@@ -39,20 +39,11 @@
 //        activePlayer = 1
 //        playerWinsLabel.isHidden = true
 //        playAgainButton.isHidden = true
-//        
 //        for i in 1...9 {
 //            let button = view.viewWithTag(i) as! UIButton
 //            button.setImage(UIImage(named: ""), for: .normal)
 //        }
 //    }
-//    
-//    func winningLoop() {
-//        for combination in winningCombinations {
-//            
-//            if gameStatus[combination[0]] != 0 && gameStatus[combination[0]] == gameStatus[combination[1]] && gameStatus[combination[1]] == gameStatus[combination[2]] {
-//                
-//                gameIsActive = false
-//                
 //                if gameStatus[combination[0]] == 1 {
 //                    playerWinsLabel.isHidden = false
 //                    playerWinsLabel.text = "X's Win!!!"
@@ -63,16 +54,12 @@
 //                    playAgainButton.isHidden = false
 //                }
 //            }
-//            
-//            gameIsActive = false
-//            
 //            for i in gameStatus {
 //                if i == 0 {
 //                    gameIsActive = true
 //                    break
 //                }
 //            }
-//            
 //            if gameIsActive == false {
 //                playerWinsLabel.text = "It's A Draw"
 //                playerWinsLabel.isHidden = false
