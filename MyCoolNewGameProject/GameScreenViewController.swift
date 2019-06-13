@@ -11,11 +11,12 @@ import UIKit
 class GameScreenViewController: UIViewController {
     
     @IBOutlet var Buttons: [UIButton]!
+    @IBOutlet weak var WinnerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activateButtons()
-        
+        WinnerLabel.isHidden = true
     }
     
     func activateButtons() {
