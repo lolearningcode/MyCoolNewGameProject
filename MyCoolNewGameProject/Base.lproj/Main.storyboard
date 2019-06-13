@@ -66,44 +66,51 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-tC-AY6">
                                         <rect key="frame" x="0.0" y="0.0" width="104.5" height="354"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niZ-Ah-N3X" userLabel="Button0">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niZ-Ah-N3X" userLabel="Button0">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.5" height="104.5"/>
                                                 <state key="normal" title="Button" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoP-jz-7A5" userLabel="Button3">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoP-jz-7A5" userLabel="Button3">
                                                 <rect key="frame" x="0.0" y="124.5" width="104.5" height="105"/>
+                                                <state key="normal" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be0-Zb-kQv" userLabel="Button6">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be0-Zb-kQv" userLabel="Button6">
                                                 <rect key="frame" x="0.0" y="249.5" width="104.5" height="104.5"/>
+                                                <state key="normal" image="O"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bjo-Ll-Ph0">
                                         <rect key="frame" x="124.5" y="0.0" width="105" height="354"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-Uk-W8O" userLabel="Button1">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-Uk-W8O" userLabel="Button1">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="104.5"/>
+                                                <state key="normal" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-7t-e9b" userLabel="Button4">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-7t-e9b" userLabel="Button4">
                                                 <rect key="frame" x="0.0" y="124.5" width="105" height="105"/>
+                                                <state key="normal" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABm-9G-AXf" userLabel="Button7">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABm-9G-AXf" userLabel="Button7">
                                                 <rect key="frame" x="0.0" y="249.5" width="105" height="104.5"/>
+                                                <state key="normal" image="O"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="juN-R8-87J">
                                         <rect key="frame" x="249.5" y="0.0" width="104.5" height="354"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eig-vU-1Ge" userLabel="Button2">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eig-vU-1Ge" userLabel="Button2">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.5" height="104.5"/>
-                                                <state key="normal" title="Button" image="X"/>
+                                                <state key="normal" title="Button" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-gC-hGp" userLabel="Button5">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-gC-hGp" userLabel="Button5">
                                                 <rect key="frame" x="0.0" y="124.5" width="104.5" height="105"/>
+                                                <state key="normal" image="O"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-S1-I9I" userLabel="Button8">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-S1-I9I" userLabel="Button8">
                                                 <rect key="frame" x="0.0" y="249.5" width="104.5" height="104.5"/>
+                                                <state key="normal" image="O"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -115,10 +122,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mj-qt-EBq">
+                                <rect key="frame" x="167.5" y="167" width="79" height="30"/>
+                                <state key="normal" title="Play Again?"/>
+                                <connections>
+                                    <action selector="playAgainButtonTapped:" destination="NQK-O2-dMZ" eventType="touchUpInside" id="V8d-pU-k4M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BGF-lk-K0S" firstAttribute="width" secondItem="Xx6-fe-Pcf" secondAttribute="width" multiplier="0.9" id="3Hb-64-ulf"/>
+                            <constraint firstItem="1mj-qt-EBq" firstAttribute="top" secondItem="bH3-RY-r6I" secondAttribute="bottom" constant="8.5" id="FjY-9g-fvk"/>
+                            <constraint firstItem="1mj-qt-EBq" firstAttribute="centerX" secondItem="wXl-hG-vsh" secondAttribute="centerX" id="Ipd-K3-35b"/>
                             <constraint firstItem="Xx6-fe-Pcf" firstAttribute="centerX" secondItem="wXl-hG-vsh" secondAttribute="centerX" id="Mwx-3V-nZi"/>
                             <constraint firstItem="BGF-lk-K0S" firstAttribute="centerY" secondItem="Xx6-fe-Pcf" secondAttribute="centerY" id="Rmc-fh-6ay"/>
                             <constraint firstItem="BGF-lk-K0S" firstAttribute="height" secondItem="Xx6-fe-Pcf" secondAttribute="height" multiplier="0.9" id="dze-90-Bu6"/>
@@ -145,12 +161,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43l-SW-snJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="90"/>
+            <point key="canvasLocation" x="1350.7246376811595" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>
         <image name="Board" width="340" height="340"/>
         <image name="O" width="374" height="374"/>
-        <image name="X" width="880" height="867"/>
     </resources>
 </document>
