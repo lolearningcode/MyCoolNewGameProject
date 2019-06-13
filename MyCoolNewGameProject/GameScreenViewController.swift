@@ -12,9 +12,10 @@ class GameScreenViewController: UIViewController {
     
     @IBOutlet var Buttons: [UIButton]!
     @IBOutlet weak var WinnerLabel: UILabel!
+    @IBOutlet weak var resetButton: UIButton!
     
-    var activePlayer = 1
     var isOnePlayer = true
+    var activePlayer = 1
     var aiHasMoved = true
     var gameStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     let winningCombinations = [[0, 1, 2], [3, 4, 5,], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
@@ -24,6 +25,8 @@ class GameScreenViewController: UIViewController {
         super.viewDidLoad()
         activateButtons()
         WinnerLabel.isHidden = true
+        resetButton.isHidden = true
+        gameReset()
     }
     
     
@@ -65,10 +68,10 @@ class GameScreenViewController: UIViewController {
         } else if (gameStatus[button.tag - 1] == 0 && gameIsActive == true) {
             gameStatus[button.tag - 1] = activePlayer 
             if (activePlayer == 1) {
-                button.setImage(#imageLiteral(resourceName: "X"), for: .normal)
+                button.setImage(#imageLiteral(resourceName: "O"), for: .normal)
                 activePlayer = 2
             } else {
-                button.setImage(#imageLiteral(resourceName: "O"), for: .normal)
+                button.setImage(#imageLiteral(resourceName: "X"), for: .normal)
                 activePlayer = 1
             }
         }
@@ -83,10 +86,12 @@ class GameScreenViewController: UIViewController {
                 
                 if gameStatus[combination[0]] == 1 {
                     WinnerLabel.isHidden = false
+                    resetButton.isHidden = false
                     WinnerLabel.text = "O's Win!!!"
                     gameIsActive = false
                 } else {
                     WinnerLabel.isHidden = false
+                    resetButton.isHidden = false
                     WinnerLabel.text = "X's Win!!!"
                     gameIsActive = false
                 }
@@ -108,11 +113,13 @@ class GameScreenViewController: UIViewController {
         if gameIsActive == false {
             WinnerLabel.text = "It's A Draw"
             WinnerLabel.isHidden = false
+            resetButton.isHidden = false
         }
     }
     
     func gameReset() {
         WinnerLabel.isHidden = true
+        resetButton.isHidden = true
         gameIsActive = true
         activePlayer = 1
         aiHasMoved = true
@@ -125,7 +132,6 @@ class GameScreenViewController: UIViewController {
     }
     
     func AIMove(moveValue: Int) {
-        
         aiHasMoved = false
         switch moveValue {
         case 0:
@@ -161,43 +167,55 @@ class GameScreenViewController: UIViewController {
     }
     
     func AIMoveLogic() {
-        
         var winningDoubles: [[Int]] = []
         for combination in winningCombinations {
             
             if gameStatus[combination[0]] != 0 && gameStatus[combination[0]] == gameStatus[combination[1]] || gameStatus[combination[1]] != 0 && gameStatus[combination[1]] == gameStatus[combination[2]] || gameStatus[combination[0]] != 0 && gameStatus[combination[0]] == gameStatus[combination[2]] {
-                print("ckech")
                 winningDoubles.append(combination)
-                
             }
         }
         if winningDoubles.isEmpty == false {
             for combination in winningDoubles {
                 if gameStatus[combination[0]] == 2 || gameStatus[combination[1]] == 2 || gameStatus[combination[2]] == 2 {
                     AIMove(moveValue: combination[0])
+                    if aiHasMoved {
+                        return
+                    }
                     AIMove(moveValue: combination[1])
+                    if aiHasMoved {
+                        return
+                    }
                     AIMove(moveValue: combination[2])
-                }
-                if aiHasMoved {
-                    return
+                    if aiHasMoved {
+                        return
+                    }
                 }
             }
             for combination in winningDoubles {
                 if gameStatus[combination[0]] == 1 || gameStatus[combination[1]] == 1 || gameStatus[combination[2]] == 1 {
                     AIMove(moveValue: combination[0])
+                    if aiHasMoved {
+                        return
+                    }
                     AIMove(moveValue: combination[1])
+                    if aiHasMoved {
+                        return
+                    }
                     AIMove(moveValue: combination[2])
-                }
-                if aiHasMoved {
-                    return
+                    if aiHasMoved {
+                        return
+                    }
                 }
             }
-        } else {
-            while aiHasMoved == false {
-                let randomNumber = Int.random(in: 0...8)
-                buttonLogic(Buttons[randomNumber])
+        }
+        var whileCount = 0
+        while aiHasMoved == false {
+            let randomNumber = Int.random(in: 0...8)
+            buttonLogic(Buttons[randomNumber])
+            whileCount += 1
+            if whileCount > 50 {
+                return
             }
         }
     }
-    
 }

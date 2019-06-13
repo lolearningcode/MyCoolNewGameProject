@@ -148,6 +148,7 @@
                     </view>
                     <connections>
                         <outlet property="WinnerLabel" destination="bH3-RY-r6I" id="eHg-tv-3BD"/>
+                        <outlet property="resetButton" destination="1mj-qt-EBq" id="hNq-d9-yk5"/>
                         <outletCollection property="Buttons" destination="niZ-Ah-N3X" collectionClass="NSMutableArray" id="b9W-kd-Las"/>
                         <outletCollection property="Buttons" destination="gyO-Uk-W8O" collectionClass="NSMutableArray" id="cKQ-N6-qfM"/>
                         <outletCollection property="Buttons" destination="eig-vU-1Ge" collectionClass="NSMutableArray" id="vcU-2W-nOs"/>
