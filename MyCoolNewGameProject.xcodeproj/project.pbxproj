@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9203136122B1B7AF0014867A /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203136022B1B7AF0014867A /* GameScreenViewController.swift */; };
+		EC2A990F22B2E9EC00E96A39 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A990E22B2E9EC00E96A39 /* Gif.swift */; };
+		EC2A991122B2EA9800E96A39 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC2A991022B2EA9800E96A39 /* giphy.gif */; };
+		EC2A991322B2EB3800E96A39 /* flawlessvictory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC2A991222B2EB3800E96A39 /* flawlessvictory.mp3 */; };
+		EC2A991522B2EC0400E96A39 /* tenor.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC2A991422B2EC0400E96A39 /* tenor.gif */; };
+		EC2A991722B2EE3400E96A39 /* yousuck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC2A991622B2EE3400E96A39 /* yousuck.mp3 */; };
 		ECC3967122B1798F00811A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3967022B1798F00811A37 /* AppDelegate.swift */; };
 		ECC3967322B1798F00811A37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3967222B1798F00811A37 /* ViewController.swift */; };
 		ECC3967622B1798F00811A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC3967422B1798F00811A37 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 
 /* Begin PBXFileReference section */
 		9203136022B1B7AF0014867A /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		EC2A990E22B2E9EC00E96A39 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		EC2A991022B2EA9800E96A39 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		EC2A991222B2EB3800E96A39 /* flawlessvictory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flawlessvictory.mp3; sourceTree = "<group>"; };
+		EC2A991422B2EC0400E96A39 /* tenor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenor.gif; sourceTree = "<group>"; };
+		EC2A991622B2EE3400E96A39 /* yousuck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yousuck.mp3; sourceTree = "<group>"; };
 		ECC3966D22B1798F00811A37 /* MyCoolNewGameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCoolNewGameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC3967022B1798F00811A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC3967222B1798F00811A37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 				ECC3967922B1799200811A37 /* LaunchScreen.storyboard */,
 				ECC3967C22B1799200811A37 /* Info.plist */,
 				9203136022B1B7AF0014867A /* GameScreenViewController.swift */,
+				EC2A990E22B2E9EC00E96A39 /* Gif.swift */,
+				EC2A991022B2EA9800E96A39 /* giphy.gif */,
+				EC2A991422B2EC0400E96A39 /* tenor.gif */,
+				EC2A991222B2EB3800E96A39 /* flawlessvictory.mp3 */,
+				EC2A991622B2EE3400E96A39 /* yousuck.mp3 */,
 			);
 			path = MyCoolNewGameProject;
 			sourceTree = "<group>";
@@ -127,7 +142,11 @@
 			files = (
 				ECC3967B22B1799200811A37 /* LaunchScreen.storyboard in Resources */,
 				ECC3967822B1799200811A37 /* Assets.xcassets in Resources */,
+				EC2A991122B2EA9800E96A39 /* giphy.gif in Resources */,
 				ECC3967622B1798F00811A37 /* Main.storyboard in Resources */,
+				EC2A991322B2EB3800E96A39 /* flawlessvictory.mp3 in Resources */,
+				EC2A991722B2EE3400E96A39 /* yousuck.mp3 in Resources */,
+				EC2A991522B2EC0400E96A39 /* tenor.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +159,7 @@
 			files = (
 				9203136122B1B7AF0014867A /* GameScreenViewController.swift in Sources */,
 				ECC3967322B1798F00811A37 /* ViewController.swift in Sources */,
+				EC2A990F22B2E9EC00E96A39 /* Gif.swift in Sources */,
 				ECC3967122B1798F00811A37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

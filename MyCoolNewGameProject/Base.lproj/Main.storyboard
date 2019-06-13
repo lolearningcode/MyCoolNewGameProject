@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SyM-Jz-mov">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
-                                    <segue destination="NQK-O2-dMZ" kind="show" id="Nsu-EJ-wYl"/>
+                                    <segue destination="NQK-O2-dMZ" kind="show" identifier="toGame" id="Nsu-EJ-wYl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tack Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9po-7b-Gq9">
@@ -32,19 +32,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-TI-B61">
+                                <rect key="frame" x="60" y="320" width="294.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ds5-hg-bjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfX-uE-9qT">
+                                        <rect key="frame" x="130.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvU-r8-17D">
+                                        <rect key="frame" x="211.5" y="0.0" width="83" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Hi-56-AC5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2C1-am-rfq"/>
                             <constraint firstItem="9po-7b-Gq9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wt-Gd-a9L"/>
+                            <constraint firstItem="fNa-TI-B61" firstAttribute="top" secondItem="9po-7b-Gq9" secondAttribute="bottom" constant="66" id="8OY-eo-KNn"/>
                             <constraint firstItem="9po-7b-Gq9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="9Q6-c6-Z60"/>
                             <constraint firstItem="6Hi-56-AC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pIU-8r-mqc"/>
+                            <constraint firstItem="fNa-TI-B61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xeZ-j8-LRq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ljA-gf-bIa"/>
+                    <connections>
+                        <outlet property="switchState" destination="WfX-uE-9qT" id="ZVL-ao-vgA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="268.1159420289855" y="99.776785714285708"/>
         </scene>
         <!--Game Screen View Controller-->
         <scene sceneID="TiC-3s-S7f">
@@ -129,6 +156,10 @@
                                     <action selector="playAgainButtonTapped:" destination="NQK-O2-dMZ" eventType="touchUpInside" id="V8d-pU-k4M"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-PF-Mod">
+                                <rect key="frame" x="54" y="659" width="318" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -148,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="WinnerLabel" destination="bH3-RY-r6I" id="eHg-tv-3BD"/>
+                        <outlet property="gifView" destination="PIN-PF-Mod" id="guQ-1s-HNp"/>
                         <outlet property="resetButton" destination="1mj-qt-EBq" id="hNq-d9-yk5"/>
                         <outletCollection property="Buttons" destination="niZ-Ah-N3X" collectionClass="NSMutableArray" id="b9W-kd-Las"/>
                         <outletCollection property="Buttons" destination="gyO-Uk-W8O" collectionClass="NSMutableArray" id="cKQ-N6-qfM"/>
@@ -162,6 +194,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43l-SW-snJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1576.8115942028987" y="30.803571428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DGu-2n-JBy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SyM-Jz-mov" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xjl-jE-n13">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6WK-wi-yQO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gT9-To-bTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642.02898550724638" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>
